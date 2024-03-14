@@ -29,7 +29,7 @@ button {
     grid-column: 3/13;
     grid-row: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
     justify-items: center;
 }
@@ -40,7 +40,7 @@ button {
     font-size: 16px;
     color: black;
     padding-left: 10px;
-    width: 90%;
+    width: 100%;
     height: 40%;
 }
 input[type="search"]:focus-within {
@@ -51,16 +51,33 @@ input[type="search"]:focus-within {
     width: 100%;
     height: 100%;
     display: grid;
-    justify-items: end;
+    justify-items: center;
     align-items: center;
+    justify-content: center;
+    grid-template-columns: 2fr 18fr;
+}
+.search-bar-image {
+    display: grid;
 }
 .profile {
     display: grid;
     align-items: center;
-    justify-items: end;
+    justify-items: center;
     margin-right: 50px;
+    grid-template-columns: 2fr 0.5fr 0.3fr 0.95fr;
+    justify-content: center;
+    align-content: center;
 }
-
+.profile-text {
+    font-weight: 600;
+    display: grid;
+    justify-content: start;
+    justify-self: center;   
+    grid-column: 4/5;
+}
+.profile-picture {
+    grid-column: 3/4;
+}
 .left-sidebar {
     grid-column: 1/3;
     background-color: rgb(0, 157, 248);
@@ -70,19 +87,39 @@ input[type="search"]:focus-within {
 }
 .left-sidebar-header {
     display: grid;
+    justify-items: start;
+    grid-template-columns: 5% 0.5fr 2fr;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     justify-items: center;
+    column-gap: 10px;
 }
 .left-sidebar-header>.header-text{
     color: white;
     font-weight: 500;
-    text-align: center;
+    text-align: start;
     font-size: 24px;
     align-self: center;
+}
+.header-text {
+    text-align: start;
+    align-self: start;
+    justify-self: start;
+}
+.header-image {
+    width: 35px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    grid-column: 2;
+}
+.home-image, .profile-image, .messages-image, .history-image, .tasks-image, .communities-image, .settings-image, .support-image, .privacy-image {
+    width: 20px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 .dashboard-nav1 {
     display: grid;
     grid-template-rows: repeat(9, auto);
-    justify-items: center;
+    justify-items: start;
     align-items: center;
     row-gap: 5px;
 }
@@ -92,6 +129,14 @@ input[type="search"]:focus-within {
 }
 .dashboard-nav1>.gap {
     padding-bottom: 20%;
+}
+.dashboard-nav-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-left: 10%;
 }
 .userbar {
     grid-column: 3/13;
