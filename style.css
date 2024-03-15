@@ -4,6 +4,11 @@
     font-family: 'Roboto';
     color: black;
 }
+body {
+    min-width: 1250px;
+    width: auto !important;
+    width: 1250px;
+}
 body, html, div {
     width: 100%;
     height: 100%;
@@ -87,7 +92,7 @@ input[type="search"]:focus-within {
     background-color: #0284c7DF;
     grid-row: 2/16;
     display: grid;
-    grid-template-rows: 10% 1fr 1fr;
+    grid-template-rows: 1% 10% 1fr 1fr;
     row-gap: 10px;
     font-size: 20px;
 }
@@ -99,9 +104,9 @@ input[type="search"]:focus-within {
     align-content: center;
     justify-content: center;
     justify-items: center;
-    column-gap: 12px;
+    column-gap: min(5%, 10px);
     grid-column: 1/4;
-    grid-row: 1;
+    grid-row: 1/2;
     background-color: #0284c7DF;
 }
 .left-sidebar-header>.header-text{
@@ -210,7 +215,7 @@ input[type="search"]:focus-within {
     justify-items: start;
     align-items: center;
     row-gap: 21px;
-    column-gap: 25px;
+    column-gap: min(15%, 25px);
 }
 .dashboard-nav1 a {
     color: white;
@@ -249,6 +254,9 @@ input[type="search"]:focus-within {
     align-items: center;
     column-gap: 20px;
 }
+.btn-container>button[type="button"]:hover {
+    background-color:rgb(0, 101, 160)
+}
 .userbar button {
     border: none;
     font-weight: 500;
@@ -285,6 +293,9 @@ input[type="search"]:focus-within {
     column-gap: 4%;
     grid-column: 2;
 }
+.card-container button:hover {
+    cursor: pointer;
+}
 .card {
     background-color: white;
     width: 100%;
@@ -301,11 +312,11 @@ input[type="search"]:focus-within {
     margin-top: min(30px, 20%);
     height: 60%;
 }
-.ccard1-header {
-    font-size: 16px;
+.ccard1-header, .ccard2-header, .ccard3-header, .ccard4-header, .ccard5-header, .ccard6-header {
+    font-size: 18px;
     font-weight: 600;
 }
-.ccard1-text {  
+.ccard1-text, .ccard2-text, .ccard3-text, .ccard4-text, .ccard5-text, .ccard6-text {
     font-size: 14.5px;
 }
 .ccard1-btns, .ccard2-btns, .ccard3-btns, .ccard4-btns, .ccard5-btns, .ccard6-btns {
@@ -329,41 +340,6 @@ input[type="search"]:focus-within {
 }
 .favourite-btn-icon, .eye-btn-icon, .fork-btn-icon {
     width: 100%;
-}
-.ccard2-header {
-    font-size: 18px;
-    font-weight: 600;
-}
-.ccard2-text {
-    font-size: 14.5px;
-}
-.ccard3-header {
-    font-size: 18px;
-    font-weight: 600;
-}
-.ccard3-text {
-    font-size: 14.5px;
-}
-.ccard4-header {
-    font-size: 18px;
-    font-weight: 600;
-}
-.ccard4-text {
-    font-size: 14.5px;
-}
-.ccard5-header {
-    font-size: 18px;
-    font-weight: 600;
-}
-.ccard5-text {
-    font-size: 14.5px;
-}
-.ccard6-header {
-    font-size: 18px;
-    font-weight: 600;
-}
-.ccard6-text {
-    font-size: 14.5px;
 }
 .right-sidebar {
     grid-column: -2/-5;
